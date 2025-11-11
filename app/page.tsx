@@ -164,12 +164,12 @@ export default function Home() {
       </section>
 
       {/* WhatsApp flotante */}
-      <a
-        href="https://wa.me/5491123456789?text=Hola%20ZyraWorks%2C%20quiero%20un%20diagn%C3%B3stico"
-        target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
-        style={{position:"fixed",right:20,bottom:20,background:"var(--brand)",color:"#0b0b0c",
-                borderRadius:999,padding:"12px 16px",fontWeight:900,boxShadow:"0 8px 30px rgba(0,0,0,.4)"}}
-      >WhatsApp</a>
+     <a
+  href="https://wa.me/5491165718097?text=Hola%20ZyraWorks%2C%20me%20gustar%C3%ADa%20un%20diagn%C3%B3stico.%20%C2%BFMe%20asesoran%3F"
+  target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
+  style={{position:"fixed",right:20,bottom:20,background:"var(--brand)",color:"#0b0b0c",
+          borderRadius:999,padding:"12px 16px",fontWeight:900,boxShadow:"0 8px 30px rgba(0,0,0,.4)"}}
+>WhatsApp</a>
 
       <footer className="footer">© {new Date().getFullYear()} ZyraWorks SAS — C.A.B.A., Argentina</footer>
     </main>
