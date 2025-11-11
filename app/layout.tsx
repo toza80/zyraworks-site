@@ -1,5 +1,5 @@
 // app/layout.tsx
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import "./globals.css";
 
@@ -15,6 +15,13 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: { icon: "/favicon.svg" },
+};
+
+// Viewport correcto para respetar safe-area (iPhone/Android)
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -33,12 +40,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es">
       <head>
-        {/* JSON-LD correcto usando next/script */}
-        <Script
-          id="ld-org"
-          type="application/ld+json"
-          strategy="beforeInteractive"
-        >{JSON.stringify(jsonLd)}</Script>
+        <Script id="ld-org" type="application/ld+json" strategy="beforeInteractive">
+          {JSON.stringify(jsonLd)}
+        </Script>
       </head>
       <body>{children}</body>
     </html>

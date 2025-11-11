@@ -11,7 +11,7 @@ export default function Home() {
             <a href="#casos">Casos</a>
             <a href="#precios">Precios</a>
             <a href="#faq">FAQ</a>
-            <a href="/dashboards">Dashboards</a> {/* ← nuevo */}
+            <a href="/dashboards">Dashboards</a>
             <a href="#contacto">Contacto</a>
           </nav>
         </div>
@@ -29,7 +29,7 @@ export default function Home() {
             <div style={{display:"flex",gap:12,marginTop:18}}>
               <a className="btn btn-primary" href="#contacto">Quiero mi diagnóstico</a>
               <a className="btn btn-ghost" href="#soluciones">Ver soluciones</a>
-              <a className="btn btn-ghost" href="/dashboards/iso-12647">Ver ahorros ISO 12647 →</a> {/* ← nuevo */}
+              <a className="btn btn-ghost" href="/dashboards/iso-12647">Ver ahorros ISO 12647 →</a>
             </div>
             <p className="muted" style={{marginTop:10,fontSize:13}}>
               * Integraciones: Kodak/Agfa/Esko, GMG/Fiery/Caldera y Veeam/TrueNAS.
@@ -137,7 +137,7 @@ export default function Home() {
       <section id="faq" className="section">
         <div className="container">
           <h2>FAQ</h2>
-          <div className="grid">
+        <div className="grid">
             <details className="card"><summary><strong>¿Trabajan remoto y on-site?</strong></summary><p className="muted" style={{marginTop:8}}>Sí, en AR, UY, CL, PY y BO.</p></details>
             <details className="card"><summary><strong>¿Necesito cambiar mi RIP?</strong></summary><p className="muted" style={{marginTop:8}}>No siempre; integramos con el que ya usás.</p></details>
             <details className="card"><summary><strong>¿Cuánto dura el piloto?</strong></summary><p className="muted" style={{marginTop:8}}>30 días, con objetivos medibles.</p></details>
@@ -163,13 +163,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WhatsApp flotante */}
-     <a
-  href="https://wa.me/5491165718097?text=Hola%20ZyraWorks%2C%20me%20gustar%C3%ADa%20un%20diagn%C3%B3stico.%20%C2%BFMe%20asesoran%3F"
-  target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
-  style={{position:"fixed",right:20,bottom:20,background:"var(--brand)",color:"#0b0b0c",
-          borderRadius:999,padding:"12px 16px",fontWeight:900,boxShadow:"0 8px 30px rgba(0,0,0,.4)"}}
->WhatsApp</a>
+      {/* WhatsApp flotante — ahora con clase y safe-area */}
+      <a
+        href="https://wa.me/54911TU_NUMERO?text=Hola%20ZyraWorks%2C%20me%20gustar%C3%ADa%20un%20diagn%C3%B3stico.%20%C2%BFMe%20asesoran%3F"
+        target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
+        className="fab-whatsapp"
+      >
+        WhatsApp
+      </a>
 
       <footer className="footer">© {new Date().getFullYear()} ZyraWorks SAS — C.A.B.A., Argentina</footer>
     </main>

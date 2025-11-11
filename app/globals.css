@@ -46,7 +46,7 @@ button.btn{appearance:none;-webkit-appearance:none;background:transparent;border
 .kpis .k{font-size:12px;color:var(--muted)}
 .kpis .v{font-weight:900;font-size:22px}
 
-/* --------- Inputs (fix visibilidad) --------- */
+/* --------- Inputs --------- */
 input,textarea,select{
   width:100%;padding:12px 14px;background:#0f1116;border:1px solid var(--line);
   border-radius:12px;color:var(--text);outline:none;caret-color:var(--brand)
@@ -69,8 +69,45 @@ label{font-size:13px;color:#cbd5e1;display:grid;gap:6px}
 
 .footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;color:#a3a3a3;font-size:13px}
 
+/* --------- FAB WhatsApp + responsive --------- */
+.fab-whatsapp{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: var(--brand);
+  color: #0b0b0c;
+  border-radius: 999px;
+  padding: 12px 16px;
+  font-weight: 900;
+  box-shadow: 0 8px 30px rgba(0,0,0,.4);
+  z-index: 60;
+  text-decoration: none;
+}
+
+/* respeta la “barba” de iPhone/Android */
+@supports (padding: max(0px)) {
+  .fab-whatsapp { bottom: calc(16px + env(safe-area-inset-bottom)); }
+}
+
 @media (max-width:880px){
   h1{font-size:34px}
   .grid-3{grid-template-columns:1fr}
   .grid-2{grid-template-columns:1fr}
+}
+
+@media (max-width: 600px){
+  .kpis{ grid-template-columns: 1fr; }
+  .form-2{ grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px){
+  .fab-whatsapp{
+    right: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+  body{ padding-bottom: 72px; } /* evita que el FAB tape contenido */
+  h1{ font-size: 32px; }
+  .container{ padding: 0 14px; }
 }
