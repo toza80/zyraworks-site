@@ -1,7 +1,7 @@
 // app/casos/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import DashboardFrame from "@/components/DashboardFrame";
+import DashboardFrame from "../../../components/DashboardFrame";
 import { casos } from "../data";
 
 type Props = { params: { slug: string } };
