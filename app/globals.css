@@ -111,3 +111,35 @@ label{font-size:13px;color:#cbd5e1;display:grid;gap:6px}
   h1{ font-size: 32px; }
   .container{ padding: 0 14px; }
 }
+/* ======= Mobile polish (≤ 600px) ======= */
+@media (max-width: 600px){
+  /* Espaciado general */
+  .section{ padding: 48px 0; }
+  .container{ padding: 0 14px; }
+
+  /* Tipografías más cómodas */
+  h1{ font-size: 32px; line-height: 1.15; }
+  h2{ font-size: 22px; line-height: 1.2; }
+  p.lead{ font-size: 16px; }
+
+  /* Grids en una sola columna */
+  .kpis{ grid-template-columns: 1fr; }
+  .form-2{ grid-template-columns: 1fr; }
+
+  /* Inputs: evita zoom en iOS y mejora accesibilidad */
+  input, textarea, select{ font-size: 16px; }
+
+  /* Nav: permite wrap y reduce separación */
+  header.header .wrap{ flex-wrap: wrap; gap: 10px; }
+  header.header nav{ display:flex; flex-wrap:wrap; gap: 10px; }
+  header.header nav a{ margin-left: 0; }
+
+  /* Tarjetas: respiración extra */
+  .card{ padding: 16px; }
+}
+
+/* Asegura que medios no desborden */
+img, video, iframe{ max-width: 100%; height: auto; }
+
+/* Color scheme para buen contraste en móviles */
+:root{ color-scheme: dark; }
